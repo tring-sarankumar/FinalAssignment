@@ -1,9 +1,7 @@
 package frequency;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Files
@@ -43,8 +41,8 @@ public class Files
                 hash.put(str1[i],1);
             }
         }
-        l.info("Frequncy "+hash);
-        l.info("Size "+str1.length);
+        l.log(Level.INFO, ()->("Frequncy "+hash));
+        l.log(Level.INFO, ()->("Size "+str1.length));
 
         PriorityQueue<Map.Entry<String, Integer>> q = new PriorityQueue<>((a, b) -> {
             return b.getValue() - a.getValue();
@@ -53,7 +51,7 @@ public class Files
         q.addAll(hash.entrySet());
 
         while (!q.isEmpty()) {
-            l.info("\n" + q.poll());
+            l.log(Level.INFO,() ->"\n" + q.poll());
         }
 
 
