@@ -33,7 +33,7 @@ public class Hashtree {
   
         // Elements get stored in default natural
         // Sorting Order(Ascending)
-        l.info(" "+ts);
+        l.log(Level.INFO,()->" " +ts);
         
       //Traversing elements 
         Iterator<String> it=ts.iterator();
