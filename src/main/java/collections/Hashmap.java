@@ -50,7 +50,8 @@ public class Hashmap
     	 // iterate through keys only
     	    l.info("Keys: ");
     	    for (Integer key : languages.keySet()) {
-    	      l.info("The key:"+key);
+    	      ;
+                l.fine("The Key: {}", key);  
     	    }
 
     	    // iterate through values only
@@ -62,7 +63,8 @@ public class Hashmap
     	    // iterate through key/value entries
     	    l.info("\nEntries: ");
     	    for (Entry<Integer, String> entry : languages.entrySet()) {
-    	      l.info("key/value"+entry);
+    	      
+              l.fine("key/value: {}", entry);  
     	      
     	   	    
       	    
